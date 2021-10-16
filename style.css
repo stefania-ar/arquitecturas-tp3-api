@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 6fr 2fr;
+    height: 100vh;
+}
+
+footer, header {
+    background-color: rgb(214, 255, 255);
+}
+
+header{
+
+}
