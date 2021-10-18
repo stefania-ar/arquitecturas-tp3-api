@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script src="js.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header></header>
     <section id="container" class="container">
@@ -16,9 +18,9 @@
             <div>
                 <h1>lista de estudiantes</h1>
             </div>
-            
-            <div>
-                <h1>Buscar</h1>
+
+            <h1>Buscar</h1>
+            <div class="gap">
                 <form action="">
                     <label for="">Número de libreta del alumno</label>
                     <input type="number" id="input1">
@@ -35,6 +37,37 @@
                     <input type="text" id="input2">
                 </form>
                 <button id="btn3">Buscar</button>
+                <form action="">
+                    <label for="">Listar Carreras con Alumnos Inscriptos</label>
+                </form>
+                <button id="btn4">Buscar</button>
+
+                <label for="">Guardar nuevo estudiante</label>
+                <form action="" class="form">
+                    <div class="ordenar">
+                        <label for="">Número libreta</label>
+                        <label for="">Nombre</label>
+                        <label for="">Apellido</label>
+                        <label for="">Género</label>
+                        <label for="">Edad</label>
+                        <label for="">DNI</label>
+                        <label for="">Ciudad</label>
+                    </div>
+                    
+                    <div class="ordenar">
+                        <input type="number">
+                        <input type="text">
+                        <input type="text">
+                        <select name="" id="">
+                            <option value="femenino">Femenino</option>
+                            <option value="masculino">Masculino</option>
+                        </select>
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </div>
+                </form>
+                <button id="btn5">Buscar</button>
             </div>
         </aside>
 
@@ -43,7 +76,8 @@
         </aside>
     </section>
     <footer>
-        <p class="parag">Developed By Octavio Cuatrocchio, Stefania Ferrante y Francisco López</p>
+        <p class="parag">Developed By Octavio Cuatrochio, Stefania Ferrante y Francisco López</p>
     </footer>
 </body>
+
 </html>

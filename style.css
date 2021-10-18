@@ -19,14 +19,6 @@ footer{
 }
 
 
-button{
-    background-color: rgb(32, 32, 32);
-    color: aliceblue;
-    border: aliceblue solid 2px;
-    border-radius: 5px;
-    appearance: none;
-}
-
 button:hover{
     background-color: rgb(56, 56, 56);
 }
@@ -38,5 +30,33 @@ button:hover{
 
 .aside1{
     background-color: rgb(39, 39, 39);
+}
 
+.form{
+    display: grid;
+    grid-template-columns: 0.4fr 0.4fr;
+    justify-content: center;
+}
+
+.ordenar{
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 0.7fr;
+}
+
+.gap{
+    display: grid;
+    row-gap: 5px;
+}
+
+button{
+    background-color: rgb(32, 32, 32);
+    color: aliceblue;
+    border: aliceblue solid 2px;
+    border-radius: 5px;
+    appearance: none;
+    display: grid;
+    grid-template-columns: 0.2fr;
+    width: 80px;
+    left: 150px;
 }

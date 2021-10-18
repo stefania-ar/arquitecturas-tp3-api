@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const botonBuscarPorID = document.getElementById("btn1");
     const botonBuscarPorCarreras= document.getElementById("btn2");
     const botonMatricular= document.getElementById("btn3");
+    const botonBuscarCarrerasConInscriptos= document.getElementById("btn4");
+    const botonguardarEstudiante = document.getElementById("btn5");
 
     //variables
     let id = document.getElementById("input1").value;
@@ -14,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //eventos
     botonBuscarPorID.addEventListener("click", getAlumnoById);
     botonBuscarPorCarreras.addEventListener("click", getEstudiantesByCarrera);
+    botonBuscarCarrerasConInscriptos.addEventListener("click", getCarrerasConInscriptos);
     botonMatricular.addEventListener("click", matricular);
+    botonguardarEstudiante.addEventListener("click", guardarEstudiante);
 
         async function fetchf(url){
         console.log("alo");
@@ -43,24 +47,46 @@ document.addEventListener("DOMContentLoaded", function () {
             url= "/estudiantes/{"+ciudad+"}/{"+idCarrera+"}";
             fetchf(url);
         }
+
+        
+    function getCarrerasConInscriptos(){
+        url= "/carreras/cantInscriptos";
+        fetchf(url);
+    }
     
     //FUNCIONES
     //  POST
     function matricular(){
         url= "/estudiantes/matricular/{"+id+"}";
-        fetchf(url);
+        let header= {
+            id:id
+        }
+        fetchPost(url, id);
     }
 
     function guardarEstudiante(){
         url= "/estudiantes";
-        let header = "";
+        let estudiante={
+            id: id,
+            nombre: document.getElementById("input_puntuacion").value,
+            apellido: document.getElementById("input_usuario").value,
+            edad: "",
+            genero: document.getElementById("id_peli").value,
+            dni:document.getElementById("id_peli").value,
+            ciudad: document.getElementById("id_peli").value
+        }
+        fetchPost(url, estudiante);
     }
 
-    //CRUD CARRERAS
-
-    function getCarrerasConInscriptos(){
-        url= "/carreras/cantInscriptos";
-        fetchf(url);
+    function fetchPost(url, param){
+        fetch(url, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(param)
+        }).then(response => {
+            response.json();
+        })
+        .catch(error =>console.log(error));
     }
     
 });
