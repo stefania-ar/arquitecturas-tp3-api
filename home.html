@@ -10,18 +10,40 @@
 </head>
 <body>
     <header></header>
-    <section>
-        <h1>Buscar</h1>
-        <button>Alumno por ID</button>
+    <section id="container" class="container">
+        <aside>
 
-        <div>
-            <form action="">
-                <label for="">Número de libreta del alumno</label>
-                <input type="number">
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
+            <div>
+                <h1>lista de estudiantes</h1>
+            </div>
+            
+            <div>
+                <h1>Buscar</h1>
+                <form action="">
+                    <label for="">Número de libreta del alumno</label>
+                    <input type="number" id="input1">
+                </form>
+                <button type="submit" id="btn1">Buscar</button>
+                <form action="">
+                    <label for="">Buscar alumnos por carrera y ciudad</label>
+                    <input type="text" id="ciudad">
+                    <input type="text" id="carrera">
+                </form>
+                <button id="btn2">Buscar</button>
+                <form action="">
+                    <label for="">Matricular Estudiante</label>
+                    <input type="text" id="input2">
+                </form>
+                <button id="btn3">Buscar</button>
+            </div>
+        </aside>
+
+        <aside id="container" class="aside1">
+            <h1>Resultados de la búsqueda</h1>
+        </aside>
     </section>
-    <footer></footer>
+    <footer>
+        <p class="parag">Developed By Octavio Cuatrocchio, Stefania Ferrante y Francisco López</p>
+    </footer>
 </body>
 </html>
